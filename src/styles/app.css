@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+    --color-light-primary: #e9e8f5;
+    --color-primary: #4f46e5;
+    --color-text-1: rgba(66,83,111,0.8);
+    --color-border-1: rgba(116,127,148,0.2);
+}
+
+body {
+    background-image: url('/images/dot-pattern.svg');
+    background-repeat: repeat;
+    background-size: 120px 90px;
+}

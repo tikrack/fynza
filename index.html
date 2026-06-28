@@ -1,13 +1,36 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fynza</title>
+    <link href="/src/styles/app.css" rel="stylesheet">
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+  <body class="min-h-screen bg-light-primary">
+  <header class="fixed left-12 right-12 top-12 z-50 pointer-events-none">
+    <nav class="pointer-events-auto mx-auto max-w-6xl flex items-center justify-between rounded-full border border-border-1 bg-white/95 backdrop-blur-sm p-2 overflow-hidden">
+      <a class="flex items-center flex-1 min-w-0 px-3 py-1 md:px-5 md:py-1.5" href="#">
+        <img alt="Ava Hotel" class="h-5.5 md:h-9 w-auto" src="/images/logo.svg">
+        <span class="mr-4">آوا</span>
+      </a>
+      <div class="flex items-center gap-2 shrink-0">
+        <button aria-label="Toggle language"
+                class="flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] tracking-wide opacity-40 hover:opacity-70 transition-opacity cursor-pointer">
+          <span class="font-semibold text-[#42536f]">EN</span><span
+                class="text-[#42536f]/30">/</span><span class="text-[#42536f]/50">ES</span></button>
+        <button class="
+                shrink-0 rounded-3xl
+                bg-gradient-to-b from-[#ff6633] to-[#f2460d]
+                border border-[rgba(116,127,148,0.2)]
+                text-white font-semibold text-center whitespace-nowrap cursor-pointer
+                px-4 py-2 text-sm tracking-tight
+                md:px-5 md:py-3 md:text-base md:tracking-[-0.32px]
+              " style="transform: none;" tabindex="0" type="button">Contact Us
+        </button>
+      </div>
+    </nav>
+  </header>
+  <script src="/src/scripts/main.ts" type="module"></script>
   </body>
 </html>
