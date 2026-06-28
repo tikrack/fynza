@@ -77,3 +77,13 @@ body {
     rgba(79, 70, 229, 0) 12%
   );
 }
+
+#problem > div:first-child {
+  background: linear-gradient(
+    0deg,
+    rgba(79, 70, 229, 0.25) 0%,
+    rgba(79, 70, 229, 0.15) 10%,
+    rgba(79, 70, 229, 0.05) 20%,
+    rgba(79, 70, 229, 0) 100%
+  );
+}
