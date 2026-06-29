@@ -9,7 +9,7 @@
   --color-text-2: #1a2f7b;
   --color-border-1: rgba(116, 127, 148, 0.2);
 
-  --font-yekan: 'yekan', sans-serif;
+  --font-yekan: "yekan", sans-serif;
 }
 
 /* Peyda Font Style */
@@ -87,4 +87,18 @@ body {
     rgba(79, 70, 229, 0.05) 20%,
     rgba(79, 70, 229, 0) 100%
   );
+}
+
+.swiper-pagination-bullet {
+  transition: all 300ms;
+  opacity: 1 !important;
+  width: 10px;
+  height: 10px !important;
+  border-radius: 999px !important;
+  background-color: rgba(255, 255, 255, 0.34);
+
+  &.swiper-pagination-bullet-active {
+    width: 30px;
+    background-color: white;
+  }
 }
