@@ -79,6 +79,13 @@ body {
   );
 }
 
+#footer-gradient {
+  background-image: linear-gradient(
+    rgba(79, 70, 229, 0.25) -20%,
+    rgba(79, 70, 229, 0) 73%
+  );
+}
+
 #problem > div:first-child {
   background: linear-gradient(
     0deg,

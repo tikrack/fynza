@@ -2409,7 +2409,7 @@
                   "
                 />
                 <div
-                  class="absolute flex flex-col bg-[#e8e8f0] items-center justify-center rounded-3xl border px-[18px] py-4 text-center z-30"
+                  class="absolute flex flex-col bg-[#e8e8f0] items-center justify-center rounded-3xl border px-4.5 py-4 text-center z-30"
                   style="
                     top: 2.5%;
                     left: 50%;
@@ -2432,7 +2432,7 @@
                   </p>
                 </div>
                 <div
-                  class="absolute flex flex-col bg-[#e8e8f0] items-center justify-center rounded-3xl border px-[18px] py-4 text-center z-30"
+                  class="absolute flex flex-col bg-[#e8e8f0] items-center justify-center rounded-3xl border px-4.5 py-4 text-center z-30"
                   style="
                     top: 49.95%;
                     left: 96.25%;
@@ -2455,7 +2455,7 @@
                   </p>
                 </div>
                 <div
-                  class="absolute flex flex-col items-center bg-[#e8e8f0] justify-center rounded-3xl border px-[18px] py-4 text-center z-30"
+                  class="absolute flex flex-col items-center bg-[#e8e8f0] justify-center rounded-3xl border px-4.5 py-4 text-center z-30"
                   style="
                     left: 50%;
                     bottom: 0;
@@ -2478,7 +2478,7 @@
                   </p>
                 </div>
                 <div
-                  class="absolute flex flex-col bg-[#e8e8f0] items-center justify-center rounded-3xl border px-[18px] py-4 text-center z-30"
+                  class="absolute flex flex-col bg-[#e8e8f0] items-center justify-center rounded-3xl border px-4.5 py-4 text-center z-30"
                   style="
                     top: 49.95%;
                     left: 3.75%;
@@ -2508,15 +2508,11 @@
       <section class="relative overflow-hidden py-20 md:py-28" id="dashboard">
         <div class="mx-auto max-w-7xl px-6 md:px-8">
           <div class="flex flex-col items-center gap-6 text-center">
-            <div
-              class="relative flex justify-center"
-            >
+            <div class="relative flex justify-center">
               <span
                 aria-hidden="true"
                 class="pointer-events-none bg-primary absolute left-1/2 -translate-x-1/2 bottom-1/2 w-0.5 rounded-full hidden md:block"
-                style="
-                  height: calc(8.2rem);
-                "
+                style="height: calc(8.2rem)"
               ></span
               ><span
                 class="relative inline-flex items-center rounded-full border bg-white px-4 py-2 text-base font-medium"
@@ -2534,7 +2530,9 @@
               >
                 نمونه داشبورد سیستم
                 <br />
-                <span class="font-yekan! font-black text-primary">آوا رزرو</span>
+                <span class="font-yekan! font-black text-primary"
+                  >آوا رزرو</span
+                >
                 را ببینید
               </h2>
             </div>
@@ -2543,9 +2541,7 @@
             <span
               aria-hidden="true"
               class="pointer-events-none w-0.5 bg-primary rounded-full hidden md:block"
-              style="
-                height: 72px;
-              "
+              style="height: 72px"
             ></span>
           </div>
           <div class="mt-8 md:mt-10">
@@ -2561,11 +2557,10 @@
               >
                 <div
                   class="relative border border-gray-400 overflow-hidden rounded-[20px] bg-white mx-auto"
-                  style="
-                    max-width: 1008px;"
+                  style="max-width: 1008px"
                 >
                   <div class="bg-secondary h-6"></div>
-                  <img src="/images/dashboard.png" alt="">
+                  <img alt="" src="/images/dashboard.png" />
                 </div>
               </div>
               <div
@@ -2596,9 +2591,9 @@
                   </svg>
                 </div>
                 <span
-                  class="text-[20px] font-bold tracking-tight  whitespace-nowrap"
+                  class="text-[20px] font-bold tracking-tight whitespace-nowrap"
                   style="color: rgb(17, 156, 52)"
-                    >اعتبار تایید شد!</span
+                  >اعتبار تایید شد!</span
                 >
               </div>
               <div
@@ -2626,8 +2621,42 @@
           </div>
         </div>
       </section>
-      <a href="https://fynza.com/">ClickMe</a>
     </main>
+    <footer class="min-h-50 relative">
+      <div
+        class="pointer-events-none absolute size-full rotate-180 bottom-0 right-0 mix-blend-multiply -z-1"
+        id="footer-gradient"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-full mx-auto px-6 md:px-12 py-6 flex flex-col items-center gap-2 text-center text-sm text-[rgba(66,83,111,0.7)] tracking-tight"
+      >
+        <p>© تمامی حقوق رسمی متعلق به گروه نرم افزاری آرین تیم است.</p>
+        <div class="flex items-center gap-4">
+          <a
+            class="text-[rgba(66,83,111,0.85)] hover:text-primary underline-offset-4 hover:underline transition-colors"
+            href="/privacy-policy"
+            >Privacy Policy</a
+          ><span aria-hidden="true" class="text-[rgba(66,83,111,0.3)]">·</span
+          ><a
+            class="text-[rgba(66,83,111,0.85)] hover:text-primary underline-offset-4 hover:underline transition-colors"
+            href="/terms"
+            >Terms of Use</a
+          >
+        </div>
+        <div class="flex items-center gap-3 flex-wrap justify-center mt-1">
+          <span
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest bg-emerald-50 text-emerald-700 border border-emerald-200"
+            ><span class="size-1.5 rounded-full bg-emerald-500"></span
+            >PROD</span
+          ><span class="text-[11px] text-[rgba(66,83,111,0.5)] font-mono"
+            >creator:
+            <span class="text-text-1"
+              >https://arianteam.com</span
+            ></span
+          >
+        </div>
+      </div>
+    </footer>
     <script src="/src/scripts/main.ts" type="module"></script>
   </body>
 </html>
