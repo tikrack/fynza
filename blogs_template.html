@@ -1,0 +1,246 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>مقالات | آوا - سیستم رزواسیون هوشمند</title>
+  <meta
+    content="مقالات و راهنماهای آوا رزرو درباره مدیریت هتل، افزایش فروش اتاق، پذیرش هوشمند و تجربه مهمان."
+    name="description"
+  />
+  <link href="/src/styles/app.css" rel="stylesheet" />
+</head>
+<body class="min-h-screen bg-light-primary">
+<header class="fixed left-12 right-12 top-12 z-50 pointer-events-none">
+  <nav
+    class="pointer-events-auto mx-auto max-w-6xl flex justify-between rounded-full border border-border-1 bg-white/95 backdrop-blur-sm p-2 overflow-hidden"
+  >
+    <a class="flex items-center min-w-0 px-3 py-1 md:px-5 md:py-1.5" href="/">
+      <img alt="Ava Hotel" class="h-5.5 md:h-9 w-auto" src="/images/logo.svg" />
+      <span class="mr-2.5 font-black text-xl text-text-2">آوا</span>
+    </a>
+    <ul class="flex gap-6 grow items-center justify-center">
+      <li>
+        <a class="text-gray-400 text-[16px]" href="/">خانه</a>
+      </li>
+      <li>
+        <a aria-current="page" class="text-gray-400 text-[16px] text-black!" href="/blogs">مقالات</a>
+      </li>
+    </ul>
+    <div class="flex items-center gap-2 shrink-0">
+      <button
+        class="flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] tracking-wide opacity-40 hover:opacity-70 transition-opacity cursor-pointer"
+      >
+        <span class="font-semibold text-[#42536f]">FA</span>
+        <span class="text-[#42536f]/30">/</span>
+        <span class="text-[#42536f]/50">EN</span>
+      </button>
+      <a
+        class="shrink-0 rounded-[23px] hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 bg-linear-to-b from-primary to-dark-primary border border-border-1 text-white font-bold text-center whitespace-nowrap cursor-pointer px-4 py-2.25 text-sm tracking-tight md:px-5 md:py-3 md:text-base md:tracking-[-0.32px]"
+        href="https://my.ereserv.ir/login"
+      >
+        ورود / ثبت نام
+      </a>
+    </div>
+  </nav>
+</header>
+<main class="relative z-10">
+  <section class="relative overflow-hidden pt-36 pb-10 md:pt-52 md:pb-16">
+    <div
+      class="pointer-events-none absolute inset-x-0 top-0 h-full mix-blend-multiply -z-1"
+      id="blogs-hero-gradient"
+    ></div>
+
+    <div class="mx-auto max-w-5xl px-6 md:px-8">
+      <div class="flex flex-col items-center text-center gap-5 md:gap-7">
+        <span
+          class="inline-flex items-center gap-2 rounded-3xl border border-border-1 bg-white/95 backdrop-blur-sm px-3.5 py-1.5 text-[12px] md:text-[13px] font-semibold text-text-1 tracking-tight"
+        >
+          <span class="size-1.5 rounded-full bg-primary"></span>
+          بلاگ آوا رزرو
+        </span>
+
+        <h1
+          class="font-yekan font-black text-[32px] leading-[1.35] md:text-[60px] md:leading-[1.25] text-[#42536f] tracking-tight"
+        >
+          هرچه برای رشد هتل لازم است،<br> در
+          <span class="text-primary">مقالات آوا</span>
+        </h1>
+
+        <p class="max-w-2xl text-[14px] md:text-[18px] font-medium leading-8 md:leading-9 text-text-1">
+          تجربه‌ها، راهنماهای عملی و تحلیل‌های تیم آوا درباره مدیریت رزرو، پذیرش هوشمند،
+          قیمت‌گذاری اتاق و ساختن تجربه‌ای که مهمان را برمی‌گرداند.
+        </p>
+
+        <form
+          class="w-full max-w-xl flex items-center gap-2 rounded-full border border-border-1 bg-white/95 backdrop-blur-sm p-2 pr-4"
+          role="search"
+        >
+          <label class="sr-only" for="blog-search">جستجو در مقالات</label>
+          <svg
+            aria-hidden="true"
+            class="size-5 shrink-0 text-[#42536f]/40"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.4-3.4" stroke-linecap="round" />
+          </svg>
+          <input
+            class="grow bg-transparent text-[14px] md:text-[15px] text-text-2 placeholder:text-[#42536f]/40 outline-none"
+            id="blog-search"
+            name="q"
+            placeholder="مثلاً: افزایش نرخ اشغال اتاق"
+            type="search"
+          />
+          <button
+            class="shrink-0 rounded-[23px] hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 bg-linear-to-b from-primary to-dark-primary border border-border-1 text-white font-bold whitespace-nowrap cursor-pointer px-4 py-2 text-[13px] md:px-5 md:py-2.5 md:text-sm"
+            type="submit"
+          >
+            جستجو
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section aria-labelledby="latest-title" class="mx-auto max-w-360 px-4 md:px-8 pb-16 md:pb-24">
+    <div class="flex items-end justify-between gap-4 mb-6 md:mb-10">
+      <div class="flex flex-col gap-2">
+        <span class="text-[12px] md:text-[13px] font-bold text-primary tracking-tight">تازه‌ترین‌ها</span>
+        <h2 class="font-yekan font-black text-[22px] md:text-[36px] leading-tight text-[#42536f] tracking-tight" id="latest-title">
+          آخرین مقالات
+        </h2>
+      </div>
+    </div>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-7">
+      ${CARDS}
+    </ul>
+  </section>
+  <!-- ===== Newsletter CTA ===== -->
+  <section class="relative overflow-hidden py-20 md:py-28" id="newsletter">
+    <div class="mx-auto max-w-7xl px-6 md:px-8">
+      <div class="flex flex-col items-center gap-6 text-center">
+        <div class="relative flex justify-center">
+        <span
+          aria-hidden="true"
+          class="pointer-events-none bg-primary absolute left-1/2 -translate-x-1/2 bottom-1/2 w-0.5 rounded-full hidden md:block"
+          style="height: calc(8.2rem)"
+        ></span
+        ><span
+          class="relative inline-flex items-center rounded-full border bg-white px-4 py-2 text-base font-medium"
+          style="border-color: rgba(116, 127, 148, 0.4); color: rgb(66, 83, 111)"
+        >خبرنامه ماهانه</span
+        >
+        </div>
+        <div>
+          <h2
+            class="text-center font-black uppercase leading-[1.4] font-yekan! tracking-[-0.01em] text-[36px] md:text-[60px]"
+            style="color: rgb(66, 83, 111)"
+          >
+            ماهی یک ایمیل،
+            <br />
+            <span class="font-yekan! font-black text-primary">نکته‌های عملی</span>
+            برای فروش بیشتر اتاق
+          </h2>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center pt-6">
+      <span
+        aria-hidden="true"
+        class="pointer-events-none w-0.5 bg-primary rounded-full hidden md:block"
+        style="height: 72px"
+      ></span>
+      </div>
+
+      <div class="mt-8 md:mt-10">
+        <div
+          class="relative overflow-hidden rounded-[40px] p-6 md:p-14"
+          style="
+          border-color: rgba(116, 127, 148, 0.4);
+          background-image: url('/images/vectors/sky-bg.jpg');
+          background-size: cover;
+          background-position: center center;
+        "
+        >
+          <div
+            class="relative overflow-hidden rounded-3xl md:rounded-[32px] border border-border-1 bg-white mx-auto p-6 md:p-10"
+            style="max-width: 720px"
+          >
+            <form class="flex flex-col gap-4 md:flex-row md:items-center">
+              <label class="sr-only" for="newsletter-email">آدرس ایمیل</label>
+              <input
+                id="newsletter-email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                required
+                placeholder="email@example.com"
+                dir="ltr"
+                class="w-full rounded-[23px] border border-border-1 bg-light-primary px-5 py-3 text-sm text-right tracking-tight outline-none transition-colors duration-200 placeholder:text-text-2 focus:border-primary focus:bg-white md:text-base"
+                style="color: rgb(66, 83, 111)"
+              />
+              <button
+                type="submit"
+                class="shrink-0 rounded-[23px] hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 bg-linear-to-b from-primary to-dark-primary border border-border-1 text-white font-bold text-center whitespace-nowrap cursor-pointer px-4 py-2.25 text-sm tracking-tight md:px-5 md:py-3 md:text-base md:tracking-[-0.32px]"
+              >
+                عضویت در خبرنامه
+              </button>
+            </form>
+            <p
+              class="mt-4 text-center text-xs md:text-sm leading-relaxed"
+              style="color: rgb(116, 127, 148)"
+            >
+              بدون تبلیغ، بدون ایمیل اضافه. هر زمان خواستید با یک کلیک لغو کنید.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="min-h-20 relative">
+  <div
+    class="pointer-events-none absolute size-full rotate-180 bottom-0 right-0 mix-blend-multiply -z-1"
+    id="footer-gradient"
+  ></div>
+  <div
+    class="absolute bottom-0 right-0 w-full mx-auto px-6 md:px-12 py-6 flex flex-col items-center gap-2 text-center text-sm text-[rgba(66,83,111,0.7)] tracking-tight"
+  >
+    <p>© تمامی حقوق رسمی متعلق به گروه نرم افزاری آرین تیم است.</p>
+    <div class="flex items-center gap-4">
+      <a
+        class="text-[rgba(66,83,111,0.85)] hover:text-primary underline-offset-4 hover:underline transition-colors"
+        href="/privacy-policy"
+      >Privacy Policy</a
+      ><span aria-hidden="true" class="text-[rgba(66,83,111,0.3)]">·</span
+    ><a
+      class="text-[rgba(66,83,111,0.85)] hover:text-primary underline-offset-4 hover:underline transition-colors"
+      href="/terms"
+    >Terms of Use</a
+    >
+    </div>
+    <div class="flex items-center gap-3 flex-wrap justify-center mt-1">
+          <span
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest bg-emerald-50 text-emerald-700 border border-emerald-200"
+          ><span class="size-1.5 rounded-full bg-emerald-500"></span
+          >PROD</span
+          ><span class="text-[11px] text-[rgba(66,83,111,0.5)] font-mono"
+    >creator:
+            <span class="text-text-1"
+            >https://arianteam.com</span
+            ></span
+    >
+    </div>
+  </div>
+</footer>
+
+<script src="/src/scripts/main.ts" type="module"></script>
+</body>
+</html>
