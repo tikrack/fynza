@@ -5,8 +5,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL =
-  "https://newsapi.org/v2/everything?q=tesla&from=2026-07-02&sortBy=publishedAt&apiKey=fe43d58fa2f849d9a98440c9d304c732";
+const BASE_URL = "https://api.platform.ereserv.ir/api/v1/platform/blog/articles";
 
 const getCardsContents = (articles) => {
   let cardsContents = ``;
@@ -17,16 +16,16 @@ const getCardsContents = (articles) => {
         <article
           class="group h-full flex flex-col overflow-hidden rounded-3xl border border-border-1 bg-white transition-all duration-300 hover:shadow-[0_16px_36px_-22px_rgba(66,83,111,0.35)] hover:-translate-y-1"
         >
-          <a class="relative block aspect-16/10 overflow-hidden bg-[#e8e8f0]" href="/blogs/occupancy-rate">
+          <a class="relative block aspect-16/10 overflow-hidden bg-[#e8e8f0]" href="/blogs/${article?.slug}">
             <img
-              alt="نمودار نرخ اشغال اتاق"
+              alt="${article?.coverImage?.alt}"
               class="size-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
               loading="lazy"
-              src="/images/vectors/1.png"
+              src="${article?.coverImage?.url}"
             />
             <span
               class="absolute right-3 top-3 rounded-3xl border border-border-1 bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[11px] font-bold text-text-1"
-            >قیمت‌گذاری</span>
+            >${article?.category ?? ""}</span>
           </a>
   
           <div class="flex grow flex-col gap-3 p-5 md:p-6">
@@ -45,11 +44,11 @@ const getCardsContents = (articles) => {
                   alt=""
                   class="size-8 rounded-full border-2 border-white object-cover bg-[#e8e8f0]"
                   loading="lazy"
-                  src="/images/blog/authors/2.jpg"
+                  src="${article?.source?.imageUrl}"
                 />
-                <span class="truncate text-[12px] font-bold text-text-2">${article.source.name}</span>
+                <span class="truncate text-[12px] font-bold text-text-2">${article?.source?.name}</span>
               </div>
-              <span class="shrink-0 text-[11px] text-[rgba(66,83,111,0.6)]">${(Math.random() * 10).toFixed(0)} دقیقه</span>
+              <span class="shrink-0 text-[11px] text-[rgba(66,83,111,0.6)]">${article?.readingTimeMinutes} دقیقه</span>
             </div>
           </div>
         </article>
@@ -88,7 +87,7 @@ const getBlogs = async () => {
   let response = await fetch(BASE_URL);
   response = await response.json();
 
-  generateBlogsPage(response?.articles ?? []);
+  generateBlogsPage(response?.data?.items ?? []);
 };
 
 getBlogs();

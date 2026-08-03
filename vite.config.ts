@@ -26,7 +26,7 @@ try {
 const inputEntries: Record<string, string> = {};
 
 inputEntries["main"] = resolve(__dirname, "index.html");
-inputEntries["blogs"] = resolve(__dirname, "blogs_template.html");
+inputEntries["blogs"] = resolve(__dirname, "blogs.html");
 
 blogsHtmlFiles.forEach((filePath) => {
   const relativePath = relative(__dirname, filePath).replace(/\.html$/, "");
