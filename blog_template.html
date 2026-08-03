@@ -1,0 +1,375 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>${PAGE_TITLE}</title>
+    <meta content="${META_DESCRIPTION}" name="description" />
+    <link href="${CANONICAL_URL}" rel="canonical" />
+
+    <meta content="article" property="og:type" />
+    <meta content="${PAGE_TITLE}" property="og:title" />
+    <meta content="${META_DESCRIPTION}" property="og:description" />
+    <meta content="${CANONICAL_URL}" property="og:url" />
+    <meta content="${COVER_URL}" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+
+    <link href="/src/styles/app.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      ${JSON_LD}
+    </script>
+  </head>
+  <body class="min-h-screen bg-light-primary">
+    <header class="fixed left-12 right-12 top-12 z-50 pointer-events-none">
+      <nav
+        class="pointer-events-auto mx-auto max-w-6xl flex justify-between rounded-full border border-border-1 bg-white/95 backdrop-blur-sm p-2 overflow-hidden"
+      >
+        <a
+          class="flex items-center min-w-0 px-3 py-1 md:px-5 md:py-1.5"
+          href="/"
+        >
+          <img
+            alt="Ava Hotel"
+            class="h-5.5 md:h-9 w-auto"
+            src="/images/logo.svg"
+          />
+          <span class="mr-2.5 font-black text-xl text-text-2">آوا</span>
+        </a>
+        <ul class="flex gap-6 grow items-center justify-center">
+          <li><a class="text-gray-400 text-[16px]" href="/">خانه</a></li>
+          <li>
+            <a
+              aria-current="page"
+              class="text-gray-400 text-[16px]"
+              href="/blogs"
+              >مقالات</a
+            >
+          </li>
+        </ul>
+        <div class="flex items-center gap-2 shrink-0">
+          <button
+            class="flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] tracking-wide opacity-40 hover:opacity-70 transition-opacity cursor-pointer"
+          >
+            <span class="font-semibold text-[#42536f]">FA</span>
+            <span class="text-[#42536f]/30">/</span>
+            <span class="text-[#42536f]/50">EN</span>
+          </button>
+          <a
+            class="shrink-0 rounded-[23px] hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 bg-linear-to-b from-primary to-dark-primary border border-border-1 text-white font-bold text-center whitespace-nowrap cursor-pointer px-4 py-2.25 text-sm tracking-tight md:px-5 md:py-3 md:text-base md:tracking-[-0.32px]"
+            href="https://my.ereserv.ir/login"
+          >
+            ورود / ثبت نام
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="relative z-10 pb-10">
+      <section class="relative overflow-hidden">
+        <div
+          class="pointer-events-none absolute inset-0 mix-blend-multiply"
+          id="header-gradient"
+        ></div>
+
+        <div class="py-20 md:py-28 pt-30.25 md:pt-40 pb-0">
+          <div class="max-w-4xl mx-auto px-6 md:px-8">
+            <nav aria-label="مسیر" class="flex justify-center">
+              <ol
+                class="flex items-center gap-2 text-xs md:text-sm tracking-tight"
+                style="color: rgb(116, 127, 148)"
+              >
+                <li>
+                  <a class="hover:text-primary transition-colors" href="/"
+                    >خانه</a
+                  >
+                </li>
+                <li aria-hidden="true" class="opacity-50">/</li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="/blogs"
+                    >مقالات</a
+                  >
+                </li>
+                <li aria-hidden="true" class="opacity-50">/</li>
+                <li
+                  class="truncate max-w-[12rem] md:max-w-none"
+                  style="color: rgb(66, 83, 111)"
+                >
+                  ${CATEGORY}
+                </li>
+              </ol>
+            </nav>
+
+            <div
+              class="mt-6 md:mt-8 flex flex-col items-center text-center gap-5 md:gap-7"
+            >
+              <h1
+                class="text-center font-black leading-[1.4] font-yekan! tracking-[-0.01em] text-[32px] md:text-[56px]"
+                style="color: rgb(66, 83, 111)"
+              >
+                ${TITLE_HTML}
+              </h1>
+
+              <p
+                class="max-w-2xl text-sm md:text-lg leading-8 md:leading-9 tracking-tight"
+                style="color: rgb(116, 127, 148)"
+              >
+                ${EXCERPT}
+              </p>
+
+              <div
+                class="flex flex-wrap items-center justify-center gap-3 md:gap-4 text-xs md:text-sm tracking-tight"
+                style="color: rgb(116, 127, 148)"
+              >
+                <span class="flex items-center gap-2">
+                  <img
+                    alt="${AUTHOR_NAME}"
+                    class="size-8 md:size-9 rounded-full border border-border-1 object-cover bg-[#e8e8f0]"
+                    loading="lazy"
+                    src="${AUTHOR_IMAGE}"
+                  />
+                  <span class="font-semibold" style="color: rgb(66, 83, 111)"
+                    >${AUTHOR_NAME}</span
+                  >
+                </span>
+                <span aria-hidden="true" class="opacity-40">·</span>
+                <time datetime="${PUBLISHED_AT_ISO}">${PUBLISHED_AT_FA}</time>
+                <span aria-hidden="true" class="opacity-40">·</span>
+                <span>${READING_TIME} دقیقه مطالعه</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 md:px-8">
+        <div
+          class="relative overflow-hidden rounded-3xl md:rounded-[40px] border p-3 md:p-5"
+          style="
+            border-color: rgba(116, 127, 148, 0.4);
+            background-image: url(&quot;/images/vectors/1.png&quot;);
+            background-size: cover;
+            background-position: center center;
+          "
+        >
+          <img
+            alt="${COVER_ALT}"
+            class="w-full h-56 md:h-[420px] object-cover rounded-2xl md:rounded-[28px] border border-border-1 bg-[#e8e8f0]"
+            src="${COVER_URL}"
+          />
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 md:px-8 mt-12 md:mt-16">
+        <div
+          class="flex flex-col-reverse lg:flex-row lg:items-start gap-8 lg:gap-12"
+        >
+          <aside
+            class="w-full lg:w-72 shrink-0 lg:sticky lg:top-36 flex flex-col gap-5"
+          >
+            ${TOC_CARD}
+
+            <div
+              class="rounded-3xl border border-border-1 bg-light-primary p-5 md:p-6"
+            >
+              <h2
+                class="text-sm font-bold tracking-tight"
+                style="color: rgb(66, 83, 111)"
+              >
+                اشتراک‌گذاری
+              </h2>
+              <div class="mt-4 flex items-center gap-2">
+                <a
+                  aria-label="اشتراک در تلگرام"
+                  class="flex size-10 items-center justify-center rounded-full border border-border-1 bg-white text-xs font-bold hover:border-primary hover:text-primary transition-colors"
+                  href="${SHARE_TELEGRAM}"
+                  rel="noopener noreferrer"
+                  style="color: rgb(66, 83, 111)"
+                  target="_blank"
+                  >TG</a
+                >
+                <a
+                  aria-label="اشتراک در واتساپ"
+                  class="flex size-10 items-center justify-center rounded-full border border-border-1 bg-white text-xs font-bold hover:border-primary hover:text-primary transition-colors"
+                  href="${SHARE_WHATSAPP}"
+                  rel="noopener noreferrer"
+                  style="color: rgb(66, 83, 111)"
+                  target="_blank"
+                  >WA</a
+                >
+                <a
+                  aria-label="اشتراک در لینکدین"
+                  class="flex size-10 items-center justify-center rounded-full border border-border-1 bg-white text-xs font-bold hover:border-primary hover:text-primary transition-colors"
+                  href="${SHARE_LINKEDIN}"
+                  rel="noopener noreferrer"
+                  style="color: rgb(66, 83, 111)"
+                  target="_blank"
+                  >IN</a
+                >
+                <button
+                  class="flex h-10 items-center justify-center rounded-full border border-border-1 bg-white px-4 text-xs font-bold hover:border-primary hover:text-primary transition-colors cursor-pointer"
+                  data-copy-link="${CANONICAL_URL}"
+                  style="color: rgb(66, 83, 111)"
+                  type="button"
+                >
+                  کپی لینک
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <article
+            class="min-w-0 grow rounded-3xl md:rounded-[40px] border border-border-1 bg-white p-6 md:p-12"
+          >
+            <div
+              class="flex flex-col gap-6 md:gap-7 text-sm md:text-base leading-8 md:leading-9 tracking-tight"
+              style="color: rgb(116, 127, 148)"
+            >
+              <p
+                class="text-base md:text-lg font-semibold leading-9"
+                style="color: rgb(66, 83, 111)"
+              >
+                ${EXCERPT}
+              </p>
+
+              ${CONTENT}
+            </div>
+
+            ${TAGS}
+
+            <div
+              class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 rounded-2xl md:rounded-3xl border border-border-1 bg-light-primary p-5 md:p-6"
+            >
+              <img
+                alt="${AUTHOR_NAME}"
+                class="size-14 shrink-0 rounded-full border border-border-1 object-cover bg-[#e8e8f0]"
+                loading="lazy"
+                src="${AUTHOR_IMAGE}"
+              />
+              <div class="min-w-0">
+                <p
+                  class="text-sm md:text-base font-bold tracking-tight"
+                  style="color: rgb(66, 83, 111)"
+                >
+                  ${AUTHOR_NAME}
+                </p>
+                <p
+                  class="mt-1 text-xs md:text-sm leading-7"
+                  style="color: rgb(116, 127, 148)"
+                >
+                  ${AUTHOR_BIO}
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      ${RELATED}
+
+      <section class="relative overflow-hidden py-20 md:py-28" id="cta">
+        <div class="mx-auto max-w-7xl px-6 md:px-8">
+          <div class="flex flex-col items-center gap-6 text-center">
+            <div class="relative flex justify-center">
+              <span
+                aria-hidden="true"
+                class="pointer-events-none bg-primary absolute left-1/2 -translate-x-1/2 bottom-1/2 w-0.5 rounded-full hidden md:block"
+                style="height: 8.2rem"
+              ></span>
+              <span
+                class="relative inline-flex items-center rounded-full border bg-white px-4 py-2 text-base font-medium"
+                style="
+                  border-color: rgba(116, 127, 148, 0.4);
+                  color: rgb(66, 83, 111);
+                "
+                >همین امروز شروع کنید</span
+              >
+            </div>
+            <h2
+              class="text-center font-black leading-[1.4] font-yekan! tracking-[-0.01em] text-[32px] md:text-[56px]"
+              style="color: rgb(66, 83, 111)"
+            >
+              پذیرش هتل‌تان را با
+              <span class="font-yekan! font-black text-primary">آوا</span>
+              ساده کنید
+            </h2>
+          </div>
+
+          <div class="relative flex justify-center pt-6">
+            <span
+              aria-hidden="true"
+              class="pointer-events-none w-0.5 bg-primary rounded-full hidden md:block"
+              style="height: 72px"
+            ></span>
+          </div>
+
+          <div class="mt-8 md:mt-10">
+            <div
+              class="relative overflow-hidden rounded-[40px] border p-6 md:p-14"
+              style="
+                border-color: rgba(116, 127, 148, 0.4);
+                background-image: url(&quot;/images/vectors/sky-bg.jpg&quot;);
+                background-size: cover;
+                background-position: center center;
+              "
+            >
+              <div
+                class="relative mx-auto flex flex-col items-center gap-5 overflow-hidden rounded-3xl md:rounded-[32px] border border-border-1 bg-white p-6 md:p-10 text-center"
+                style="max-width: 720px"
+              >
+                <p
+                  class="text-sm md:text-base leading-8"
+                  style="color: rgb(116, 127, 148)"
+                >
+                  حساب آزمایشی بسازید و جریان کامل رزرو تا پذیرش را روی داده‌های
+                  خودتان ببینید.
+                </p>
+                <a
+                  class="shrink-0 rounded-[23px] hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 bg-linear-to-b from-primary to-dark-primary border border-border-1 text-white font-bold text-center whitespace-nowrap cursor-pointer px-4 py-2.25 text-sm tracking-tight md:px-5 md:py-3 md:text-base md:tracking-[-0.32px]"
+                  href="https://my.ereserv.ir/login"
+                >
+                  ورود / ثبت نام
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="min-h-10 relative">
+      <div
+        class="pointer-events-none absolute size-full rotate-180 bottom-0 right-0 mix-blend-multiply -z-1"
+        id="footer-gradient"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-full mx-auto px-6 md:px-12 py-6 flex flex-col items-center gap-2 text-center text-sm text-[rgba(66,83,111,0.7)] tracking-tight"
+      >
+        <p>© تمامی حقوق رسمی متعلق به گروه نرم افزاری آرین تیم است.</p>
+        <div class="flex items-center gap-4">
+          <a
+            class="text-[rgba(66,83,111,0.85)] hover:text-primary underline-offset-4 hover:underline transition-colors"
+            href="/privacy-policy"
+            >Privacy Policy</a
+          ><span aria-hidden="true" class="text-[rgba(66,83,111,0.3)]">·</span
+          ><a
+            class="text-[rgba(66,83,111,0.85)] hover:text-primary underline-offset-4 hover:underline transition-colors"
+            href="/terms"
+            >Terms of Use</a
+          >
+        </div>
+        <div class="flex items-center gap-3 flex-wrap justify-center mt-1">
+          <span
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-widest bg-emerald-50 text-emerald-700 border border-emerald-200"
+            ><span class="size-1.5 rounded-full bg-emerald-500"></span
+            >PROD</span
+          ><span class="text-[11px] text-[rgba(66,83,111,0.5)] font-mono"
+            >creator:
+            <span class="text-text-1">https://arianteam.com</span></span
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="/src/scripts/main.ts" type="module"></script>
+  </body>
+</html>

@@ -1,39 +1,38 @@
 import { defineConfig } from "vite";
-import { extname, relative, resolve } from "path";
-import { readdirSync, statSync } from "fs";
+import { dirname, extname, relative, resolve } from "node:path";
+import { existsSync, readdirSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
 
-function getHtmlFiles(dir: string, filesList: string[] = []): string[] {
-  const files = readdirSync(dir);
+const rootDir = dirname(fileURLToPath(import.meta.url));
 
-  for (const file of files) {
-    const name = resolve(dir, file);
-    if (statSync(name).isDirectory()) {
-      getHtmlFiles(name, filesList);
-    } else if (extname(name) === ".html") {
-      filesList.push(name);
-    }
-  }
+const isTemplate = (filePath: string) => /_template\.html$/.test(filePath);
 
-  return filesList;
+const getHtmlFiles = (dir: string): string[] => {
+  if (!existsSync(dir)) return [];
+
+  return readdirSync(dir, { recursive: true, withFileTypes: true })
+    .filter((entry) => entry.isFile() && extname(entry.name) === ".html")
+    .map((entry) => resolve(entry.parentPath, entry.name))
+    .filter((filePath) => !isTemplate(filePath));
+};
+
+const toEntryName = (filePath: string) =>
+  relative(rootDir, filePath)
+    .replace(/\\/g, "/")
+    .replace(/\.html$/, "");
+
+const inputEntries: Record<string, string> = {
+  main: resolve(rootDir, "index.html"),
+  blogs: resolve(rootDir, "blogs.html"),
+};
+
+for (const filePath of getHtmlFiles(resolve(rootDir, "blogs"))) {
+  inputEntries[toEntryName(filePath)] = filePath;
 }
 
-let blogsHtmlFiles: string[] = [];
-try {
-  blogsHtmlFiles = getHtmlFiles(resolve(__dirname, "blogs"));
-} catch (e) {}
-
-const inputEntries: Record<string, string> = {};
-
-inputEntries["main"] = resolve(__dirname, "index.html");
-inputEntries["blogs"] = resolve(__dirname, "blogs.html");
-
-blogsHtmlFiles.forEach((filePath) => {
-  const relativePath = relative(__dirname, filePath).replace(/\.html$/, "");
-  inputEntries[relativePath] = filePath;
-});
-
 export default defineConfig({
+  appType: "mpa",
   build: {
     rollupOptions: {
       input: inputEntries,
